@@ -8,5 +8,6 @@ Pillow
 plotly
 plyer
 streamlit
+streamlit-aggrid
 tensorflow
 wget
