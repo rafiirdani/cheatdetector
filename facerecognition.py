@@ -3,6 +3,7 @@ import numpy as np
 import os 
 from gaze_tracking import GazeTracking
 import tensorflow as tf
+from streamlit_webrtc import webrtc_streamer
 
 gaze = GazeTracking()
 recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -15,7 +16,8 @@ id = 0
 # names related to ids: example ==> Marcelo: id=1,  etc
 names = ['None', 'Raff', 'Dyah', 'Yusuf'] 
 # Initialize and start realtime video capture
-cam = cv2.VideoCapture(0)
+# cam = cv2.VideoCapture(0)
+cam = webrtc_streamer()
 cam.set(3, 640) # set video widht
 cam.set(4, 480) # set video height
 # Define min window size to be recognized as a face
