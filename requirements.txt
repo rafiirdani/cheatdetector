@@ -11,3 +11,5 @@ streamlit
 streamlit-aggrid
 tensorflow
 wget
+pylibsrtp
+streamlit-webrtc
